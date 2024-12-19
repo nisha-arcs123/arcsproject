@@ -1,0 +1,174 @@
+@import "../functions/mixin.scss";
+// @import "../css/fonts.scss";
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+}
+
+.outer-container{
+    width: 100%;
+    height: 100%;
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 135px;
+        border-bottom: 1px solid #DEDEDE;
+        backdrop-filter: blur(18px);
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+        .nav{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            z-index: 3;
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                color: #707070;
+                text-transform: uppercase;
+            }
+            .active{
+                font-weight: 600;
+                color: #136DFB;
+            }
+        }
+    }
+
+    .banner{
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      .left,.right{
+        border-radius: 50% 22% 40% 80%;
+        width:900px;
+        height:900px;
+        position: absolute;
+        z-index:0;
+        top: 0;
+        }
+      .left{  
+          filter: blur(100px);
+          left: -500px;
+          background: radial-gradient(circle at 50% 50%,#C0BEDD,rgba(255, 255, 255, 0.2));
+          top: -90px;
+      }
+      .left-img{
+        position: absolute;
+        left: 0px;
+        top: 230px;
+      }
+      .right{      
+          filter: blur(40px);
+          right: -400px;
+          background: radial-gradient(circle at 50% 50%,#E5EAF9,rgba(255, 255, 255, 0.2));
+      }
+      .right-img{
+        position: absolute;
+        right: -290px;
+        top: 230px;
+      }
+      .bottom-img{
+        bottom: -560px;
+        left: 30%;
+        z-index: 0px;
+        position: absolute;
+      }
+      .banner-div{
+        z-index: 1;
+          @include flexProperty(flex, center, center);
+          flex-direction: column;
+          width: 70%;
+          margin: auto;
+        .heading-ai{
+          margin-top: 300px;
+          font-size: 90px;
+          font-weight: 700;
+          line-height: 108px;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(to right, #0096FF,#BB64FF,#F2416B,#EB7500);
+          -webkit-background-clip: text; 
+          -webkit-text-fill-color: transparent;
+          position: relative;
+          .Ai{
+            display: inline-block;
+            position: absolute;
+            top: -30px;
+            left:48%;
+          }
+        }
+        .para{
+          font-size: 16px;
+          font-weight: 500;
+          color: #707070;
+          line-height: 24px;
+          text-align: center;
+          width: 50%;
+        }
+      }
+    }
+
+    .todosContainer{
+      background-color: #F9F9F9;
+      border-radius: 30px;
+      margin: 0px auto;
+      width: 80%;
+      padding: 30px;
+      h3{
+        font-size: 24px;
+        font-weight: 600;
+        background: linear-gradient(to right, #FF623F,#BC1AE4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h1{
+        font-size: 48px;
+        font-weight: 600;
+        color: #202323;
+        line-height: 60px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 60%;
+      }
+      .cards{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        .card1{
+          background-color: #FFFFFF;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          border-radius: 15px;
+          width: 21%;
+          h4{
+            font-size: 20px;
+            font-weight: 600;
+            color: #202323;
+            margin-bottom: 10px;
+          }
+          p{
+            font-size: 16px;
+            font-weight: 500;
+            color: #707070;
+            margin-bottom: 20px;
+          }
+          a{
+            font-size: 16px;
+            font-weight: 500;
+            color: #707070;
+            margin-top: 17px;
+          }
+        }
+      }
+     
+    }
+}
