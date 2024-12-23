@@ -4,11 +4,16 @@
   font-family: "Poppins", serif;
 }
 
-.outer-container {
+body {
   width: 100%;
+  overflow-x: hidden;
   height: 100%;
 }
-.outer-container .navbar {
+
+Container {
+  overflow-x: hidden;
+}
+Container .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,66 +25,58 @@
   top: 0px;
   z-index: 10;
 }
-.outer-container .navbar .nav {
+Container .navbar .nav {
   display: flex;
   align-items: center;
   gap: 30px;
   z-index: 3;
 }
-.outer-container .navbar .nav a {
+Container .navbar .nav a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   color: #707070;
   text-transform: uppercase;
 }
-.outer-container .navbar .nav .active {
+Container .navbar .nav .active {
   font-weight: 600;
   color: #136DFB;
 }
-.outer-container .banner {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
-.outer-container .banner .left, .outer-container .banner .right {
+Container .left, Container .right {
   border-radius: 50% 22% 40% 80%;
   width: 900px;
   height: 900px;
   position: absolute;
   z-index: 0;
-  top: 0;
 }
-.outer-container .banner .left {
+Container .left {
   filter: blur(100px);
   left: -500px;
   background: radial-gradient(circle at 50% 50%, #C0BEDD, rgba(255, 255, 255, 0.2));
-  top: -90px;
 }
-.outer-container .banner .left-img {
+Container .left-img {
   position: absolute;
   left: 0px;
-  top: 230px;
+  top: 300px;
 }
-.outer-container .banner .right {
+Container .right {
   filter: blur(40px);
   right: -400px;
   background: radial-gradient(circle at 50% 50%, #E5EAF9, rgba(255, 255, 255, 0.2));
 }
-.outer-container .banner .right-img {
+Container .right-img {
   position: absolute;
   right: -290px;
-  top: 230px;
+  top: 300px;
 }
-.outer-container .banner .bottom-img {
-  bottom: -560px;
-  left: 30%;
-  z-index: 0px;
-  position: absolute;
+Container .banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
-.outer-container .banner .banner-div {
+Container .banner .banner-div {
   z-index: 1;
   display: flex;
   align-items: center;
@@ -88,7 +85,7 @@
   width: 70%;
   margin: auto;
 }
-.outer-container .banner .banner-div .heading-ai {
+Container .banner .banner-div .heading-ai {
   margin-top: 300px;
   font-size: 90px;
   font-weight: 700;
@@ -100,13 +97,13 @@
   -webkit-text-fill-color: transparent;
   position: relative;
 }
-.outer-container .banner .banner-div .heading-ai .Ai {
+Container .banner .banner-div .heading-ai .Ai {
   display: inline-block;
   position: absolute;
   top: -30px;
   left: 48%;
 }
-.outer-container .banner .banner-div .para {
+Container .banner .banner-div .para {
   font-size: 16px;
   font-weight: 500;
   color: #707070;
@@ -114,57 +111,178 @@
   text-align: center;
   width: 50%;
 }
-.outer-container .todosContainer {
+Container .banner .bottom-img {
+  left: 30%;
+  position: absolute;
+  top: 80%;
+  z-index: 0;
+}
+Container .todosContainer {
   background-color: #F9F9F9;
   border-radius: 30px;
   margin: 0px auto;
-  width: 80%;
+  width: 83%;
+  opacity: 1;
   padding: 30px;
+  margin-bottom: 100px;
 }
-.outer-container .todosContainer h3 {
-  font-size: 24px;
-  font-weight: 600;
-  background: linear-gradient(to right, #FF623F, #BC1AE4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.outer-container .todosContainer h1 {
-  font-size: 48px;
-  font-weight: 600;
-  color: #202323;
-  line-height: 60px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+Container .todosContainer .large-heading {
   width: 60%;
 }
-.outer-container .todosContainer .cards {
+Container .todosContainer h3 {
+  margin-bottom: 20px;
+}
+Container .todosContainer h1 {
+  margin-bottom: 40px;
+}
+Container .todosContainer .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
 }
-.outer-container .todosContainer .cards .card1 {
+Container .todosContainer .cards .card1 {
   background-color: #FFFFFF;
   padding: 15px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  width: 21%;
+  width: 21.5%;
 }
-.outer-container .todosContainer .cards .card1 h4 {
-  font-size: 20px;
+Container .our-strategy {
+  margin-top: 200px;
+  background-color: #F9F9F9;
+  transform: skewy(5deg);
+  width: 100%;
+  padding: 150px;
+  gap: 100px;
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+Container .our-strategy .text-container {
+  width: 40%;
+  transform: skewy(-5deg);
+}
+Container .our-strategy .text-container .large-heading {
+  width: 100%;
+}
+Container .our-strategy .text-container .normal-text {
+  width: 94%;
+}
+Container .our-strategy .colorful-card {
+  transform: skewy(-5deg);
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+Container .our-strategy .colorful-card .card-back {
+  width: 40%;
+}
+Container .our-strategy .colorful-card .card-back .card2 {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(500px);
+          backdrop-filter: blur(500px);
+  background: linear-gradient(to top left, #C0BEDD, rgba(255, 255, 255, 0.2));
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+Container .our-strategy .colorful-card .card-back .card2 .z-img {
+  position: absolute;
+  left: 116px;
+  top: 0px;
+  width: 390px;
+}
+Container .our-strategy .colorful-card .card-back .card2 .img-div {
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+  background-color: #202323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+Container .our-strategy .colorful-card .card-back .card2 .img-div img {
+  width: 24px;
+  height: 24px;
+}
+Container .snake {
+  z-index: 1;
+  position: absolute;
+}
+Container .circle {
+  position: absolute;
+  left: 550px;
+  top: 186%;
+}
+Container .why-choose-us {
+  background-color: #F9F9F9;
+  border-radius: 30px;
+  margin: 0px auto;
+  width: 83%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 200px;
+}
+Container .why-choose-us .choose-div {
+  display: flex;
+  padding-bottom: 100px;
+  width: 100%;
+  z-index: 3;
+  flex-direction: column;
+}
+Container .why-choose-us .choose-div .item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 41px;
+  background: linear-gradient(to right, #307FFC, #A1C6FF, #136DFB);
+  z-index: 2;
+  width: 100%;
+}
+Container .why-choose-us .choose-div .item h1 {
+  font-size: 48px;
   font-weight: 600;
-  color: #202323;
-  margin-bottom: 10px;
+  color: #FFFFFF;
 }
-.outer-container .todosContainer .cards .card1 p {
-  font-size: 16px;
-  font-weight: 500;
-  color: #707070;
-  margin-bottom: 20px;
+Container .why-choose-us .choose-div .item h2 {
+  font-size: 38px;
+  font-weight: 300;
+  color: #FFFFFF;
+  line-height: 40px;
 }
-.outer-container .todosContainer .cards .card1 a {
-  font-size: 16px;
+Container .why-choose-us .choose-div .item .list {
+  margin-top: 70px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(215, 215, 215, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+}
+Container .why-choose-us .choose-div .item .list li {
+  font-size: 14px;
   font-weight: 500;
-  color: #707070;
-  margin-top: 17px;
+  color: #FFFFFF;
+  z-index: 1;
+}
+Container .our-expertise {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 45%;
 }/*# sourceMappingURL=style.css.map */
