@@ -14,6 +14,22 @@
   box-shadow: 0px 15px 60px 0px #0A51C9;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
 .mt-30 {
   margin-top: 30px;
 }
@@ -25,4 +41,38 @@
 .mt-113 {
   margin-top: 113px;
   margin-bottom: 95px;
+}
+
+.colorful-heading-sm-size {
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(to right, #BC1AE4 6%, #FF623F 9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.large-heading {
+  font-size: 48px;
+  font-weight: 600;
+  color: #202323;
+  line-height: 60px;
+}
+
+.normal-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #707070;
+}
+
+.card-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #202323;
+}
+
+.anchor-tag {
+  font-size: 16px;
+  font-weight: 500;
+  color: #707070;
+  text-decoration: none;
 }/*# sourceMappingURL=classes.css.map */
