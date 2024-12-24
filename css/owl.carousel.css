@@ -184,12 +184,7 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
-
-  .owl-stage{
-    padding: 0px !important;
-    width: 100% !important;
-    display: flex;
+  .owl-carousel .item {
+    width: 100%; /* Ensure each item takes up the full width */
+    box-sizing: border-box; /* Include padding and border in width */
   }
-  /* .owl-item{
-    width: 23% !important;
-  } */
