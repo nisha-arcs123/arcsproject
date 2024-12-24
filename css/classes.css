@@ -9,6 +9,11 @@
   font-weight: 500;
   line-height: 24px;
 }
+.primary-btn:hover {
+  background-color: #0050CE;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+}
 
 .box-shadow {
   box-shadow: 0px 15px 60px 0px #0A51C9;
