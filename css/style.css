@@ -63,7 +63,7 @@ body {
 }
 .outer-container .right-img {
   position: absolute;
-  right: -290px;
+  right: 0px;
   top: 300px;
 }
 .outer-container .banner {
