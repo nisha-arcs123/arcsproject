@@ -8,15 +8,13 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .primary-btn:hover {
   background-color: #0050CE;
-  border: 2px solid #FFFFFF;
   color: #FFFFFF;
-}
-
-.box-shadow {
-  box-shadow: 0px 15px 60px 0px #0A51C9;
 }
 
 .mt-10 {
@@ -51,9 +49,10 @@
 .colorful-heading-sm-size {
   font-size: 24px;
   font-weight: 600;
-  background: linear-gradient(to right, #BC1AE4 6%, #FF623F 9%);
+  background: linear-gradient(to right, #BC1AE4 2%, #FF623F 10%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 
 .large-heading {
@@ -67,12 +66,14 @@
   font-size: 16px;
   font-weight: 500;
   color: #707070;
+  margin-bottom: 0px;
 }
 
 .card-heading {
   font-size: 20px;
   font-weight: 600;
   color: #202323;
+  margin-bottom: 0px;
 }
 
 .anchor-tag {

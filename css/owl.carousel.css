@@ -184,7 +184,27 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
-  .owl-carousel .item {
-    width: 100%; /* Ensure each item takes up the full width */
-    box-sizing: border-box; /* Include padding and border in width */
+  
+
+  /* .owl-carousel .owl-item {
+   height: 100%;
+  } */ 
+   
+  .owl-carousel .owl-stage {
+    display: flex;
+    animation: scroll 5s linear infinite; /* Animate the entire carousel */
   }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .owl-carousel .owl-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+  }
+
