@@ -206,5 +206,10 @@
 
   .owl-carousel .owl-item {
     flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 388px !important;
+    height: 374px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
   }
-

@@ -16,9 +16,9 @@
 <body>
     <div class="outer-container">
         <div class="navbar">
-            <div class="logo-Container">
-                <img src="./image/logo.svg" alt="">
-            </div>
+                
+            <img src="./image/logo.svg" alt="" class="logo-Container">
+            
 
             <div class="nav">
                 <a href="#" class="active">HOME</a>
@@ -27,6 +27,27 @@
                 <a href="#">about US</a>
                 <button class="primary-btn .box-shadow-none">Contact Us</button>
             </div>
+
+
+            <div class="hamburgur-menu">
+                <div class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            
+              <!-- Dropdown Menu -->
+                <div class="menu" id="menu">
+                    <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">Expertise</a></li>
+                    <li><a href="#">about US</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+               
         </div>
 
         <div class="outer-banner-body">
@@ -180,8 +201,9 @@
                     <div class="item">
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle1">
                         <h1>01</h1>
+                        <!-- <h1 class="h1">01</h1> -->
                         <h2>Fast launch and revenue</h2>
-    
+                        <!-- <h2 class="h2">Fast launch and revenue</h2> -->
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle2">
                         <div class="list">
                             <li>100% of our projects are delivered strictly on deadlines and within budget.</li>
@@ -195,7 +217,9 @@
                     <div class="item">
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle1">
                         <h1>02</h1>
+                        <!-- <h1 class="h1">02</h1> -->
                         <h2>Built for scalability</h2>
+                        <!-- <h2 class="h2">Built for scalability</h2> -->
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle2">
                         <div class="list">
                             <li>100% of our projects are delivered strictly on deadlines and within budget.</li>
@@ -208,8 +232,10 @@
     
                     <div class="item">
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle1">
-                        <h1>03</h1>
+                        <h1 >03</h1>
+                        <!-- <h1 class="h1">03</h1> -->
                         <h2>Secure and safe</h2>
+                        <!-- <h2 class="h2">Secure and safe</h2> -->
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle2">
                         <div class="list">
                             <li>100% of our projects are delivered strictly on deadlines and within budget.</li>
@@ -223,7 +249,9 @@
                     <div class="item">
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle1">
                         <h1>04</h1>
+                        <!-- <h1 class="h1">04</h1> -->
                         <h2>Flexible</h2>
+                        <!-- <h2 class="h2">Flexible</h2> -->
                         <img src="image/Ellipse 61.svg" alt="" class="small-circle2">
                         <div class="list">
                             <li>100% of our projects are delivered strictly on deadlines and within budget.</li>
@@ -653,6 +681,16 @@
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
-
+    <script>
+        // JavaScript to toggle the menu
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+    
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          menu.classList.toggle('show');
+        });
+      </script>
+    
 </body>
 </html>

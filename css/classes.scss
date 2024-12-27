@@ -56,6 +56,23 @@
     font-weight: 600;
     color: #202323;
     line-height: 60px;
+    @media screen and (max-width: 1700px) {
+        width: 80%;
+        font-size: 40px;
+        line-height: 47px;
+      }
+      @media screen and (max-width: 1440px) {
+        font-size: 35px;
+        line-height: 42px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 30px;
+        line-height: 38px;
+      }
+      @media screen and (max-width: 770px) {
+        font-size: 25px;
+        line-height: 31px;
+      }
 }
 
 .normal-text{
