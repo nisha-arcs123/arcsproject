@@ -63,7 +63,8 @@
   background: linear-gradient(to right, #BC1AE4 2%, #FF623F 10%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1440px) {
   .colorful-heading-sm-size {
@@ -126,7 +127,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -134,7 +135,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #707070;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 1094px) {
   .normal-text {
@@ -152,7 +153,7 @@
   font-size: 20px;
   font-weight: 600;
   color: #202323;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1094px) {
   .card-heading {
@@ -162,6 +163,7 @@
 @media screen and (max-width: 480px) {
   .card-heading {
     font-size: 14px;
+    margin-bottom: 5px;
   }
 }
 

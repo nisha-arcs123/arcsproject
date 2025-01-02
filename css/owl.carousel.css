@@ -213,4 +213,28 @@
     text-overflow: ellipsis;
     box-sizing: border-box;
     
+    .owl-dots {
+      text-align: center; /* Center the dots */
+      margin-top: 20px;   /* Space above the dots */
+      .owl-dot {
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        background: #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background 0.3s;
+      }
+      
+      .owl-dot.active {
+        background: #000; /* Active dot color */
+      }
+      
+    }
+    
+    
+   
+  }
+  .owl-carousel .owl-dots.disabled{
+    display: block !important;
   }

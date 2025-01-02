@@ -1,0 +1,27 @@
+.outer-div .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 135px;
+  border-bottom: 1px solid #dedede;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+@media screen and (max-width: 1300px) {
+  .outer-div .navbar {
+    padding: 10px 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .outer-div .navbar {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .outer-div .navbar .logo-Container {
+    width: 50%;
+  }
+}/*# sourceMappingURL=about.css.map */
