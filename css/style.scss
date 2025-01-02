@@ -195,7 +195,7 @@ body {
     .left-img {
       position: absolute;
       left: 0;
-      top: 200px;
+      top: 250px;
     }
     .right {
       filter: blur(40px);
@@ -213,18 +213,19 @@ body {
     .right-img {
       position: absolute;
       right: 0;
-      top: 200px;
+      top: 250px;
     }
     
     .snake {
       z-index: 0;
+      top: 29.5%;
       position: absolute;
     }
     .circle {
       position: absolute;
       left: 550px;
-      top: 30.3%;
-     
+      top: 29%;
+     z-index: 10;
       @media screen and (max-width:600px) {
         left: 417px;
         top: 36.3%;
@@ -253,7 +254,7 @@ body {
        }
       
       .heading-ai {
-        margin-top: 300px;
+        margin-top: 302px;
         font-size: 90px;
         font-weight: 700;
         line-height: 108px;
@@ -343,7 +344,7 @@ body {
          }
       }
       button {
-        box-shadow: 0px 15px 60px 0px #0a51c9;
+        box-shadow: 0px 20px 40px 0px rgba(10, 81, 201,.5);
         transition-property: background-color box-shadow;
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
@@ -359,7 +360,7 @@ body {
     .bottom-img {
       left: 28%;
       position: absolute;
-      top:815px;
+      top:800px;
       z-index: -10;
       @media screen and (max-width:1800px) {
         left: 30%;
@@ -381,7 +382,7 @@ body {
       }
     }
     .downarrow{
-      margin-top: 191px;
+      margin-top: 100px;
       margin-bottom: 94px;
       @media screen and (max-width:1094px){
         margin-top: 170px;
@@ -409,7 +410,7 @@ body {
     margin: 0px auto;
     width: 86%;
     padding: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     @media screen and (max-width: 1440px) {
       padding: 25px;
     }
@@ -425,6 +426,7 @@ body {
     
     .large-heading {
       width: 60%;
+      margin-bottom: 30px;
       @media screen and (max-width: 1440px) {
         width: 80%;
         }
@@ -545,13 +547,23 @@ body {
     }
   }
 
+  .seperator1{
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 194px solid #f9f9f9;
+  }
+  .seperator2{
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-top: 194px solid #f9f9f9;
+  }
   .our-strategy {
-    margin-top: 200px;
     background-color: #f9f9f9;
-    transform: skewy(5deg);
     width: 100%;
-    padding: 150px;
-    gap: 50px;
+    padding:10px 150px 100px 150px;
+    gap: 108px;
     display: flex;
     @media screen and (max-width:1600px) {
       padding: 105px;
@@ -570,7 +582,6 @@ body {
     }
     .text-container {
       width: 48%;
-      transform: skewy(-5deg);
       z-index: 2;
       top: 42px;
       position: relative;
@@ -601,7 +612,8 @@ body {
       }
       button {
         margin: 0px auto;
-        box-shadow: 0px 15px 60px 0px #0a51c9;
+        margin-left: 0;
+        box-shadow: 0px 20px 40px 0px rgba(10, 81, 201,.5);
         transition-property: background-color box-shadow;
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
@@ -612,7 +624,6 @@ body {
     }
 
     .colorful-card {
-      transform: skewy(-5deg);
       width: 48%;
       display: flex;
       flex-wrap: wrap;
@@ -654,17 +665,16 @@ body {
           top: 0;
           bottom: 0;
           background-color: white;
-          box-shadow: 0 0 30px 30px white;
-          opacity: 0.5;
+          box-shadow: 0 0 50px 50px white;
           overflow: hidden;
-          width: 0;
           height: 100%;
-          border-radius: 50%;
-          transition: 0.5s ease;
-          transition-property: width transform;
+          transition: 2s cubic-bezier(0.28, 0.01, 0.63, 0.98);
           transform: translateX(500px);
         }
-
+        &:hover .overlay {
+          width: 100%;
+          transform: translateX(-500px);
+        }
         &::before{
           content: '';
           position: absolute;
@@ -679,13 +689,12 @@ body {
           -webkit-mask-composite: destination-out;
           mask-composite: exclude;
           pointer-events: none;
-          transition: all 0.4s ease;
           z-index: 0;
+          overflow: hidden;
+          transition: 2s cubic-bezier(0.28, 0.01, 0.63, 0.98);
         }
-        &:hover .overlay {
-          width: 100%;
-          border-radius: 50%;
-          transform: translateX(-500px);
+        &:hover::before{
+          transform: translateX(-500);
         }
         &:hover .img-div {
           background: linear-gradient(
@@ -718,25 +727,25 @@ body {
         }
       
       .first-card {
-        top: -86px;
+        top: -6px;
         @media screen and (max-width:1520px) {
          top: 0;
         }
       }
       .second-card {
-        top: -36px;
+        top: 45px;
         @media screen and (max-width:1520px) {
           top: 0;
          }
       }
       .third-card {
-        top: -76px;
+        top: -1px;
         @media screen and (max-width:1520px) {
           top: 0;
          }
       }
       .fourth-card {
-        top: -26px;
+        top: 49px;
         @media screen and (max-width:1520px) {
           top: 0;
          }
@@ -760,12 +769,13 @@ body {
       height: 700px;
       // opacity: 1;
       padding: 30px;
+      padding-top: 50px;
       display: flex;
       align-items: center;
       flex-direction: column;
       // justify-content: center;
       margin-bottom: 120px;
-      margin-top: 200px;
+      margin-top: 120px;
       position: relative;
       @media screen and (max-width: 1440px) {
         padding: 25px;
@@ -992,13 +1002,13 @@ body {
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        background-color: white;
-        // gap: 23px;
+        // gap: 10px;
+        gap: 23px;
         .z-img {
           position: absolute;
           left: 0;
           top: 8px;
-          width: 335px;
+          width: 290px;
         }
         .normal-text{
           font-size: 14px;
@@ -1023,7 +1033,8 @@ body {
             align-items: end;
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
             @media screen and (max-width:590px) {
               order: 2;
             }
@@ -1047,11 +1058,9 @@ body {
             justify-content: center;
             .img1{
               display: block;
-              transform: transition .2s ease-in-out;
             }
             .img2{
               display: none;
-              transition: all;
             }
             @media screen and (max-width:590px) {
               width: 70%;
@@ -1072,11 +1081,12 @@ body {
           top: 0;
           bottom: 0;
           background-color: white;
-          box-shadow: 0 0 30px 30px white;
-          opacity: 0.5;
+          box-shadow: 0 0 50px 50px white;
+          // opacity: 0.5;
           overflow: hidden;
           height: 100%;
-          transition: 0.5s ease;
+          // transition: 2s cubic-bezier(0.28, 0.01, 0.63, 0.98);
+          transition: .5s ease-in;
           transform: translateX(900px);
         }
         &:hover .overlay {
@@ -1088,7 +1098,9 @@ body {
           background: linear-gradient(to right, rgb(255, 255, 255,.5),rgb(192, 190, 221,.3));
           z-index: 2;
           border-radius: 20px;
+          // border:4px solid transparent;
           border: transparent;
+          padding: 19px;
           .normal-text{
             color: #707070;
           }
@@ -1109,12 +1121,15 @@ body {
               box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
               background: linear-gradient(to right, rgb(255, 255, 255,.5),rgb(192, 190, 221,.3));
               border-color: white;
-              transition: width 2s;
+              transition: all .5s ease;
+              
               .img1{
                 display: none;
+                animation: fadeOut .5s ease;
               }
               .img2{
                 display: block;
+                animation:  fadeIn .5s ease;
               }
             }
           }
@@ -1135,14 +1150,14 @@ body {
         -webkit-mask-composite: destination-out;
         mask-composite: exclude;
         pointer-events: none;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
         z-index: 0;
       }
    
       .div1 {
         background-color: #ff6f00;
         border: 4px solid #ff9a4c;
-        // width: 39%;
+        width: 39%;
         @media screen and (max-width:1094px) {
           width: 48%;
         }
@@ -1374,15 +1389,21 @@ body {
      }
     }
     .common {
-      display: flex;
-      flex-wrap: nowrap;
-      margin-bottom: 200px;
+      display: flex; 
+      margin-bottom: 120px;
       width: 100%;
       overflow: hidden;
+      flex-wrap: nowrap;
       .owl-stage-outer {
+        
         .owl-stage {
           padding: 0px !important;
-
+          display: flex;
+          justify-content: space-between; /* Adds spacing between cards */
+          align-items: flex-start; /* Aligns cards at the top */
+          flex-wrap: nowrap; /* Ensures all cards stay on one line */
+          // overflow-x: auto; /* Adds horizontal scrolling if needed */
+          gap: 20px; 
           .owl-item {
             width: 390px !important;
           }
@@ -1505,6 +1526,7 @@ body {
     background-color: #f9f9f9;
     padding: 136px;
     padding-bottom: 40px;
+    padding-top: 100px;
     @media screen and (max-width: 1094px) {
       padding: 100px;
     }
@@ -1619,11 +1641,12 @@ body {
             height: 42px;
             align-items: center;
             display: flex;
-            box-shadow: 0px 15px 60px 0px #0a51c9;
+            box-shadow: 0px 20px 40px 0px rgba(10, 81, 201,.5);
             transition-property: background-color box-shadow;
             transition-duration: 0.3s;
             transition-timing-function: ease-in-out;
             position: absolute;
+            text-transform: capitalize;
             right: 3px;
             &:hover {
               box-shadow: none;
@@ -1767,3 +1790,24 @@ body {
     transform: translateX(-100%);
   }
 }
+
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeIn {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
