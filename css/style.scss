@@ -698,7 +698,7 @@ body {
           overflow: hidden;
           height: 100%;
           width: 100%;
-          transition: 2s cubic-bezier(0.28, 0.01, 0.63, 0.98);
+          transition: .5s cubic-bezier(0.28, 0.01, 0.63, 0.98);
           transform: translateX(500px);
         }
         &:hover .overlay {
@@ -721,7 +721,7 @@ body {
           z-index: 0;
           overflow: hidden;
           // transition: border .5s cubic-bezier(0.28, 0.01, 0.63, 0.98);
-          transition: all .5s ease-in-out;
+          transition: all .3s ease-in-out;
         }
         &:hover::before{
           // transform: translateX(-500);

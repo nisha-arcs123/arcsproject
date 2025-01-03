@@ -20,5 +20,62 @@
         width: 50%;
       }
     }
+
+    .cross {
+      position: relative;
+      width: 35px;
+      height: 3px; /* Thickness of the lines */
+      background-color: #1B0D36;
+      border-radius: 5px;
+      transform: rotate(45deg);
+      @media screen and (max-width: 550px) {
+        width: 8%;
+      }
+    }
+    
+    .cross::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #1B0D36;
+      transform: rotate(-90deg);
+      border-radius: 5px;
+    }
+  }
+
+  .text{
+    font-size: 57px;
+    color: #EFEFEF;
+    text-align: center;
+    font-family: "Kanit", serif;
+    text-transform: uppercase;
+    span{
+      font-weight: 700;
+    }
+  }
+  .two-divider-outer{
+    width: 100%;
+    height: 100%;
+    .first-divider{
+      width: 40%;
+      background-color: #FAFAFA;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .inner-banner{
+        width: 71%;
+        height: 57%;
+        background: linear-gradient(to right , #307ffc, #a1c6ff, #136dfb);
+        border: 4px solid #FFFFFF4D;
+        border-radius: 15px;
+      }
+    }
+    .second-divider{
+      background-color: #FFFFFF;
+    }
   }
 }

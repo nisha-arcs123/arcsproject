@@ -772,7 +772,7 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  transition: 2s cubic-bezier(0.28, 0.01, 0.63, 0.98);
+  transition: 0.5s cubic-bezier(0.28, 0.01, 0.63, 0.98);
   transform: translateX(500px);
 }
 .outer-container .our-strategy .colorful-card .card2:hover .overlay {
@@ -794,7 +794,7 @@ body {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .outer-container .our-strategy .colorful-card .card2:hover::before {
   border: 0px solid transparent;
