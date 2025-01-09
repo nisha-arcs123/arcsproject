@@ -11,13 +11,10 @@ body {
 }
 .outer-container {
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexProperty(flex, center,space-between,"","",sticky);
     padding: 15px 135px;
     border-bottom: 1px solid #dedede;
     backdrop-filter: blur(18px);
-    position: sticky;
     top: 0px;
     z-index: 10;
     @media screen and (max-width: 1300px) {
@@ -33,8 +30,8 @@ body {
       
     }
     .nav {
-      display: flex;
-      align-items: center;
+      
+    @include flexProperty(flex, center,"","","","");
       gap: 30px;
       z-index: 3;
 
@@ -71,9 +68,7 @@ body {
         .hamburger {
           width: 40px;
           height: 30px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          @include flexProperty(flex, "",space-between,column,"","");
           cursor: pointer;
           .line {
             width: 100%;
@@ -101,9 +96,6 @@ body {
 
         /* Menu */
         .menu {
-          position: absolute;
-          top: 60px;
-          right: 10%;
           background-color: #fff;
           width: 200px;
           padding: 20px;
@@ -112,6 +104,7 @@ body {
           opacity: 0;
           visibility: hidden;
           transition: opacity 0.3s ease, transform 0.3s ease;
+          @include positioning(absolute,"",60px,10%,"","");
           &.show {
             transform: translateY(0);
             opacity: 1;
@@ -164,15 +157,12 @@ body {
     position: relative;
     overflow: hidden;
     height: auto;
-
     .left,
     .right {
       border-radius: 50% 22% 40% 80%;
       width: 900px;
       height: 900px;
-      position: absolute;
-      z-index: 0;
-      top: 100px;
+      @include positioning(absolute,"",100px,"","",0);
       @media screen and (max-width:1094px) {
         top: -100px;
       }
@@ -194,39 +184,30 @@ body {
       }
     }
     .left-img {
-      position: absolute;
-      left: 0;
-      top: 222px;
+      @include positioning(absolute,0,222px,"","","");
     }
     .right {
       filter: blur(40px);
-      right: -250px;
       background: radial-gradient(
         circle at 50% 50%,
         #e5eaf9,
         rgba(255, 255, 255, 0.2)
       );
       overflow: hidden;
+      @include positioning(absolute,"","",-250px,"","");
       @media screen and (max-width:580px) {
         right: -500px;
       }
     }
     .right-img {
-      position: absolute;
-      right: -40px;
-      top: 202px;
+      @include positioning(absolute,-40px,202px,"","","");
     }
     
     .snake {
-      z-index: 0;
-      top: 30.5%;
-      position: absolute;
+      @include positioning(absolute,"",30.5%,"","",0);
     }
     .circle {
-      position: absolute;
-      left: 550px;
-      top: 30%;
-      z-index: 10;
+      @include positioning(absolute,550px,30%,"","",10);
       @media screen and (max-width:600px) {
         left: 417px;
         top: 36.3%;
@@ -236,14 +217,11 @@ body {
   }
 
   .banner {
-    display: flex;
-    align-items: center;
     width: 100%;
-    flex-direction: column;
+    @include flexProperty(flex, center,"",column,"","");
     .banner-div {
       z-index: 1;
-      @include flexProperty(flex, center, center);
-      flex-direction: column;
+      @include flexProperty(flex, center, center,column,"","");
       width: 70%;
       margin: auto;
       @media screen and (max-width: 1094px) {
@@ -293,11 +271,10 @@ body {
         }
         .ai {
           display: inline-block;
-          position: relative;
-          top: -10px;
-          left: -5px;
           width: 152px;
           height: 100px;
+
+      @include positioning(relative,-5px,-10px,"","","");
           img{
             width: 100%;
           }
@@ -362,24 +339,17 @@ body {
       }
     }
     .bottom-img {
-      left: 28%;
-      position: absolute;
-      top:770px;
-      z-index: -10;
+      @include positioning(absolute,28%,770px,"","",-10);
       @media screen and (max-width:1800px) {
-        left: 30%;
-        top: 900px;
+      @include positioning(absolute,30%,900px,"","",-10);
       }
       @media screen and (max-width:1440px) {
-        top: 700px;
-        left: 23%;
-
+        @include positioning(absolute,23%,700px,"","",-10);
       }
       @media screen and (max-width:580px) {
-        top: 650px;
-        left:21%;
         height: 500px;
         width: 300px;
+        @include positioning(absolute,21%,650px,"","",-10);
       }
       @media screen and (max-width:380px){
         display: none;
@@ -443,9 +413,9 @@ body {
           }
     }
     .cards {
-      display: flex;
-      flex-wrap: wrap;
       gap: 28px;
+
+      @include flexProperty(flex, "", "","",wrap,"");
       @media screen and (max-width: 1440px) {
         gap: 25px;
       }
@@ -458,12 +428,10 @@ body {
       .card1 {
         background-color: #ffffff;
         padding: 15px;
-        display: flex;
-        flex-direction: column;
         border-radius: 15px;
         width: 23.5%;
         cursor: pointer;
-
+      @include flexProperty(flex, "", "",column,"","");
         @media screen and (max-width: 1700px) {
           width: 30%;
         }
@@ -499,12 +467,11 @@ body {
           }
         }
         .anchor-tag {
-          display: flex;
-          align-items: center;
           gap: 10px;
           cursor: pointer;
-          position: relative;
           overflow: hidden;
+
+      @include flexProperty(flex, center, "","","",relative);
           @media screen and (max-width:480px) {
            gap: 0;
           }
@@ -592,15 +559,11 @@ body {
     .text-container {
       width: 48%;
       z-index: 2;
-      position: relative;
-      display: flex;
-      justify-content: start;
-      flex-direction: column;
+      @include flexProperty(flex, "", start,column,"",relative);
       @media screen and (max-width:1520px) {
         width: 100%;
         margin-bottom: 40px;
-        align-items: center;
-        justify-content: center;
+      @include flexProperty(flex, center, center,"","","");
       }
       @media screen and (max-width:480px){
         margin-bottom: 0;
@@ -645,10 +608,9 @@ body {
 
     .colorful-card {
       width: 48%;
-      display: flex;
-      flex-wrap: wrap;
       gap: 42px;
 
+      @include flexProperty(flex, "", "","",wrap,"");
       @media screen and (max-width:1520px) {
         width: 100%;     
         justify-content: center;
@@ -668,24 +630,20 @@ body {
         border: none;
         cursor: pointer;
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         border-radius: 15px; 
-        // background: linear-gradient(to bottom right, rgb(255, 255, 255,.8),rgb(192, 190, 221,.2));
-
         background: radial-gradient(circle at top left, white,rgba(192, 190, 221, 0.3));
-        // z-index: 0;
+
+      @include flexProperty(flex, "", center,column,"","");
         @media screen and (max-width:480px) {
           width: 48%;
           border-radius: 14px;
         }
-       
+        @media screen and (max-width:380px) {
+          width: 95%;
+        }
         .z-img {
-          position: absolute;
-          left: 60px;
-          top: 0px;
           width: 390px;
+          @include positioning(absolute,60px,0px,"","","");
         }
       
         .overlay {
@@ -700,17 +658,14 @@ body {
           width: 100%;
           transition: .5s cubic-bezier(0.28, 0.01, 0.63, 0.98);
           transform: translateX(500px);
+          @include positioning(absolute,"",0,0,0,"");
         }
         &:hover .overlay {
           transform: translateX(-500px);
         }
         &::before{
           content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
+          @include positioning(absolute,0,0,0,0,"");
           border-radius: 15px;
           border: 1px solid transparent;
           background: linear-gradient(109.92deg, #0096FF 12.78%, #BB64FF 37.63%, #F2416B 62.12%, #EB7500 87.3%);
@@ -720,11 +675,9 @@ body {
           pointer-events: none;
           z-index: 0;
           overflow: hidden;
-          // transition: border .5s cubic-bezier(0.28, 0.01, 0.63, 0.98);
           transition: all .3s ease-in-out;
         }
         &:hover::before{
-          // transform: translateX(-500);
           border: 0px solid transparent;
         }
         &:hover .img-div {
@@ -738,8 +691,6 @@ body {
         }
         &:hover {
           box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1), 0px 10px 50px 0px rgba(0, 0, 0, 0.3);
-          // box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
-          
         }
       }
         .img-div {
@@ -747,7 +698,7 @@ body {
           height: 40px;
           width: 40px;
           background-color: #202323;
-          @include flexProperty(flex, center, center);
+          @include flexProperty(flex, center, center,"","","");
           img {
             width: 24px;
             height: 24px;
@@ -800,15 +751,10 @@ body {
       margin: 0px auto;
       width: 90%;
       height: 700px;
-      // opacity: 1;
       padding: 60px 30px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      // justify-content: center;
       margin-bottom: 120px;
       margin-top: 120px;
-      position: relative;
+      @include flexProperty(flex, center, "",column,"",relative);
       @media screen and (max-width: 1440px) {
         padding: 25px;
       }
@@ -834,11 +780,6 @@ body {
       }
     }
     .choose-div {
-      // display: flex;
-      // padding-bottom: 100px;
-      // width: 100%;
-      // z-index: 3;
-      // flex-direction: column;
       cursor: pointer;
       top: -600px;
       @media screen and (max-width: 480px) {
@@ -848,49 +789,37 @@ body {
         padding: 0px !important;
 
         .item {
-          display: flex;
-          flex-direction: column;
-          // justify-content: start;
           border-radius: 15px;
           padding: 20px;
           margin-top: 41px;
           overflow: hidden;
           background: linear-gradient(to right , #307ffc, #a1c6ff, #136dfb);
-          // // z-index: 2;
-          position: relative;
           height: 374px;
           border: 4px solid #FFFFFF4D;
           
+      @include flexProperty(flex, "", "",column,"",relative);
           @media screen and (max-width:480px) {
             height: 280px;
             margin-top: 0;
           }
           .small-circle1 {
             width: 23%;
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            @include positioning(absolute,"",10px,10px,"","");
             transition: transform 0.5s ease-in;
           }
           .small-circle2 {
             width: 23%;
-            position: absolute;
-            left: 50px;
-            bottom: 60px;
+            @include positioning(absolute,50px,"","",60px,"");
             transition: transform 0.5s ease-in;
           }
           .big-circle {
             width: 30%;
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
+            @include positioning(absolute,"","",0,0,"");
             transition: transform 0.2s ease-in;
           }
           .z-img {
-            position: absolute;
-            top: 0;
-            left: 110px;
             width: 250px;
+            @include positioning(absolute,110px,0,"","","");
           }
           h1 {
             font-size: 48px;
@@ -900,7 +829,6 @@ body {
             @media screen and (max-width:1440px) {
               font-size: 40px;
             }
-
             @media screen and (max-width:1094px) {
               font-size: 35px;
             }
@@ -908,13 +836,6 @@ body {
               font-size: 30px;
             }
           }
-          // .h2{
-          //   font-size: 38px;
-          //   font-weight: 300;
-          //   color: #ffffff;
-          //   line-height: 40px;
-          //   animation: texth3 .5s ease-in-out;
-          // }
           .h2{
             display: none;
           }
@@ -946,16 +867,14 @@ body {
             border-radius: 15px;
             padding: 10px;
             width: 92%;
-            position: absolute;
             z-index: 1;
             bottom: 19px;
             right: 14px;
-            display: flex;
-            flex-direction: column;
             gap: 5px;
             border: 1.79px solid #d7d7d733;
-            list-style-type: disc; /* Set the bullet style */
+            list-style-type: disc; 
             list-style-position: outside; 
+            @include flexProperty(flex, "", "",column,"",absolute);
             @media screen and (max-width:480px) {
               margin-top: 20px;
               margin-bottom: 0;
@@ -1011,13 +930,11 @@ body {
     }
   }
   .our-expertise {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     margin: auto;
     width: 85%;
     margin-bottom: 120px;
+    @include flexProperty(flex, "", center,column,"","");
     @media screen and (max-width:1440px) {
       width: 95%;
     }
@@ -1040,13 +957,11 @@ body {
      }
     }
     .expertise-div {
-      display: flex;
-      flex-wrap: wrap;
       margin-top: 35px;
       gap: 20px;
       width: 100%;
-      justify-content: start;
 
+      @include flexProperty(flex, "", start,"",wrap,"");
       @media screen and (max-width: 1094px) {
         justify-content: center;
       }
@@ -1058,20 +973,14 @@ body {
         border-radius: 20px;
         padding: 15px;
         color: #ffffff;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        position: relative;
         overflow: hidden;
         cursor: pointer;
-        // gap: 10px;
         gap: 23px;
         border: 4px solid #FFFFFF4D;
+      @include flexProperty(flex, "", space-between,column,"",relative);
         .z-img {
-          position: absolute;
-          left: 0;
-          top: 8px;
           width: 290px;
+          @include positioning(absolute,0,8px,"","","");
         }
         .normal-text{
           font-size: 14px;
@@ -1082,34 +991,34 @@ body {
           color: #FFFFFF;
         }
         .lower-div {
-          display: flex;
-          justify-content: space-between;
-          position: relative;
+      @include flexProperty(flex, "", space-between,"","",relative);
           @media screen and (max-width:600px) {
-            // flex-direction: column;
-            justify-content:space-between;
             gap: 10px;
+          }
+          @media screen and (max-width:310px){
+            flex-direction: column;
           }
           h3 {
             margin: 0px;
-            display: flex;
-            align-items: end;
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 10px;
             text-transform: uppercase;
+            @include flexProperty(flex, end, "","","","");
             @media screen and (max-width:1440px){
               font-size: 18px;
+            }
+            @media screen and (max-width:310px){
+              order: 2;
             }
             
             &::after {
               content: "";
               width: 67px;
               height: 4px;
-              bottom: 0px;
               background: white;
               border-radius: 30px;
-              position: absolute;
+            @include positioning(absolute,"","","",0,"");
             }
           }
           .img-div {
@@ -1117,9 +1026,11 @@ body {
             border-radius: 18px;
             width: 105px;
             height: 105px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+           @include flexProperty(flex, center, center,"","","");
+           @media screen and (max-width:310px){
+            order: 1;
+            width: 100%;
+          }
             .img1{
               display: block;
             }
@@ -1127,25 +1038,16 @@ body {
               display: none;
             }
           
-          
-            // @media screen and (max-width:375px) {
-            //   width: 90%;
-            // }
           }
         }
         .overlay {
-          position: absolute;
-          right: 0;
-          top: 0;
-          bottom: 0;
+          @include positioning(absolute,"",0,0,0,"");
           background-color: white;
           box-shadow: 0 0 50px 50px white;
-          // opacity: 0.5;
           overflow: hidden;
           height: 250px;
           width: 150px;
           transition: .7s cubic-bezier(0.28, 0.01, 0.63, 0.98);
-          // transition: .5s ease-in;
           transform: translateX(900px);
           border-radius:20px;
         }
@@ -1156,7 +1058,6 @@ body {
           background: linear-gradient(to right, rgb(255, 255, 255,.5),rgb(192, 190, 221,.3));
           z-index: 2;
           border-radius: 20px;
-          // border:4px solid transparent;
           border: transparent;
           padding: 19px;
           .normal-text{
@@ -1195,11 +1096,7 @@ body {
 
       .divs:hover::before{
         content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        @include positioning(absolute,0,0,0,0,0);
         border-radius: 20px;
         border: 1px solid transparent;
         background: linear-gradient(109.92deg, #0096FF 12.78%, #BB64FF 37.63%, #F2416B 62.12%, #EB7500 87.3%);
@@ -1208,7 +1105,6 @@ body {
         mask-composite: exclude;
         pointer-events: none;
         animation: borderColor .5 ease;
-        z-index: 0;
       }
    
       .div1 {
@@ -1218,9 +1114,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1238,9 +1131,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1258,9 +1148,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1280,9 +1167,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1302,9 +1186,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1324,9 +1205,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1345,9 +1223,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1365,9 +1240,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1387,9 +1259,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1409,9 +1278,6 @@ body {
         @media screen and (max-width:1094px) {
           width: 48%;
         }
-        // @media screen and (max-width:580px) {
-        //   width: 45%;
-        // }
         @media screen and (max-width:600px) {
           width: 100%;
         }
@@ -1427,12 +1293,10 @@ body {
   }
 
   .our-community {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     margin: auto;
     width: 100%;
+    @include flexProperty(flex, "", center,column,"","");
     h1 {
       width: 60%;
       margin: auto;
@@ -1446,11 +1310,10 @@ body {
      }
     }
     .common {
-      display: flex; 
       margin-bottom: 120px;
       width: 100%;
       overflow: hidden;
-      flex-wrap: nowrap;
+      @include flexProperty(flex, "", "",column,nowrap,"");
       @media screen and (max-width: 480px) {
         margin-bottom: 60px;
      }
@@ -1458,41 +1321,57 @@ body {
         
         .owl-stage {
           padding: 0px !important;
-          display: flex;
-          // justify-content: space-between; /* Adds spacing between cards */
-          align-items: flex-start; /* Aligns cards at the top */
-          flex-wrap: nowrap; /* Ensures all cards stay on one line */
-          // overflow-x: auto; /* Adds horizontal scrolling if needed */
+          flex-wrap: nowrap; 
           gap: 30px; 
+
+      @include flexProperty(flex,flex-start, "","","","");
           .owl-item {
             width: 390px !important;
             margin-right: 0px !important;
           }
         }
       }
-
+      .owl-nav{
+        display: none;
+      }
+      .owl-dots{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 30px;
+        button {
+          width: 10px;
+          height: 10px;
+          background-color: #707070;
+          border: none;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          &:hover,
+          &.active {
+            background-color: #0096FF;
+            width: 30px;
+            border-radius: 20px;
+          }
+        }
+        
+      }
       .community-divs {
         position: relative;
         .people-div {
-          display: flex;
-          flex-direction: column;
           width: 390px;
           border-radius: 20px;
           background-color: #f3f4f6;
           padding: 30px 20px;
-          position: relative;
+      @include flexProperty(flex,"", "",column,"",relative);
           .rectangle {
-            position: absolute;
-            left: 0;
-            bottom: 71px;
+            @include positioning(absolute,0,"","",71px,"");
             @media screen and (max-width: 480px) {
               bottom: 56px;
             }
           }
           .rectangle2 {
-            position: absolute;
-            left: 201px;
-            bottom: 0;
+            @include positioning(absolute,201px,"","",0,"");
             @media screen and (max-width: 1440px) {
               left: 188px;
             }
@@ -1526,14 +1405,14 @@ body {
           }
         }
         .testimonial {
-          position: absolute;
-          display: flex;
           background-color: #ffffff;
           padding: 15px;
           gap: 15px;
           bottom: 0px;
           left: 0px;
           border-top-right-radius: 20px;
+
+      @include flexProperty(flex, "", "","","",absolute);
           img {
             width: 55px;
             @media screen and (max-width: 480px) {
@@ -1602,14 +1481,10 @@ body {
       padding: 40px 20px;
     }
     .adress-div {
-      display: flex;
-      // flex-wrap: wrap;
       gap: 50px;
-      // justify-content: space-between;
       border-bottom: 1px solid #202323;
-
       padding-bottom: 55px;
-      align-items: end;
+      @include flexProperty(flex, end, "","","","");
       @media screen and (max-width: 1600px) {
         flex-wrap: wrap;
       }
@@ -1656,10 +1531,10 @@ body {
           }
         }
         .img-div {
-          display: flex;
-          align-items: center;
           gap: 10px;
           margin-bottom: 10px;
+
+      @include flexProperty(flex, center, "","","","");
           @media screen and (max-width: 480px) {
             margin-bottom:8px ;
           }
@@ -1685,8 +1560,8 @@ body {
           padding: 2px;
           margin-bottom: 13px;
           height: 48px;
-          position: relative;
-          display: flex;
+
+      @include flexProperty(flex, "", "","","",relative);
           input {
             border: none;
             background: transparent;
@@ -1704,15 +1579,13 @@ body {
           }
           button {
             height: 42px;
-            align-items: center;
-            display: flex;
             box-shadow: 0px 20px 40px 0px rgba(10, 81, 201,.5);
             transition-property: background-color box-shadow;
             transition-duration: 0.3s;
             transition-timing-function: ease-in-out;
-            position: absolute;
             text-transform: capitalize;
             right: 3px;
+            @include flexProperty(flex, center, "","","",absolute);
             &:hover {
               box-shadow: none;
             }
@@ -1723,8 +1596,8 @@ body {
 
     .foot {
       margin-top: 40px;
-      display: flex;
-      justify-content: space-between;
+
+      @include flexProperty(flex, "", space-between,"","","");
       @media screen and (max-width: 876px) {
         flex-direction: column;
       }
@@ -1745,8 +1618,7 @@ body {
         gap: 15px;
         @media screen and (max-width: 876px) {
           order: 1;
-          justify-content: center;
-          align-items: center;
+          @include flexProperty(flex, center, center,"","","");
         }
         @media screen and (max-width: 380px) {
           flex-direction: column;
@@ -1755,10 +1627,9 @@ body {
           border: 1px solid #999a9c;
           padding: 12px;
           border-radius: 21px;
-          display: flex;
-          align-items: center;
           height: 38px;
           gap: 5px;
+          @include flexProperty(flex, center, "","","","");
           @media screen and (max-width: 380px) {
             width: 123px;
             justify-content: center;
@@ -1889,8 +1760,6 @@ body {
   }
 }
 
-
-
 @keyframes texth2 {
   0%{
     transform: translateX(-120%);
@@ -1900,19 +1769,6 @@ body {
     opacity: 1;
   }
 }
-//
-
-// @keyframes texth3 {
-//   0% {
-//     transform: translateX(-120%);
-//     opacity: 1;
-//   }
- 
-//   100% {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
 
 @keyframes borderColor {
   0%{

@@ -156,10 +156,10 @@
 
 .owl-carousel {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap; 
     overflow: hidden;
 }
 
 .owl-carousel .owl-item {
-    flex: 0 0 auto; /* Prevent shrinking or wrapping */
+    flex: 0 0 auto; 
 }

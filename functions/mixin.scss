@@ -1,5 +1,17 @@
-@mixin flexProperty($first, $second, $third){
+@mixin flexProperty($first, $second, $third,$forth, $fifth,$sixth){
     display: $first;
     align-items: $second;
     justify-content: $third;
+    flex-direction: $forth;
+    flex-wrap: $fifth;
+    position: $sixth;
+}
+
+@mixin positioning($first,$second,$third,$forth,$fifth,$sixth){
+    position: $first;
+    left: $second;
+    top: $third;
+    right:$forth;
+    bottom:$fifth;
+    z-index: $sixth;
 }
