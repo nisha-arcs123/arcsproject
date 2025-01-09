@@ -1,0 +1,165 @@
+.primary-btn{
+    padding: 12px 20px;
+    border-radius: 30px;
+    background-color: #136DFB;
+    color: #FFFFFF;
+    border: 1px solid #136DFB;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:hover{
+        background-color: #0050CE;
+        color: #FFFFFF;
+    }
+
+    @media screen and (max-width:480px) {
+        padding: 8px 10px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+
+.mt-10{
+    margin-top: 10px;
+}
+.mb-18{
+    margin-bottom: 18px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mt-40{
+    margin-top: 40px;
+}
+.mt-113{
+    margin-top: 113px;
+    margin-bottom: 95px;
+}
+.m-0{
+    margin: 0;
+}
+.colorful-heading-sm-size{
+    font-size: 24px;
+    font-weight: 600;
+    background: linear-gradient(to right,#BC1AE4 2%,#FF623F 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    @media screen and (max-width:1440px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width:1094px) {
+        font-size: 16px;
+    }
+    @media screen and (max-width:480px) {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.large-heading{
+    font-size: 48px;
+    font-weight: 600;
+    color: #202323;
+    line-height: 60px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 1700px) {
+        
+        font-size: 40px;
+        line-height: 46px;
+        width: 90%;
+    }
+    @media screen and (max-width: 1440px) {
+       
+        font-size: 35px;
+        line-height: 42px;
+    }
+    @media screen and (max-width: 950px) {
+      
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 770px) {
+       
+        font-size: 28px;
+        line-height: 34px;
+    }
+    @media screen and (max-width: 580px) {
+        
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @media screen and (max-width: 480px) {
+        
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.normal-text{
+    font-size: 16px;
+    font-weight: 500;
+    color: #707070;
+    margin-bottom:30px;
+    @media screen and (max-width: 1094px) {
+        font-size: 14px;
+
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+        margin-top: 0;
+    }
+}
+
+.card-heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: #202323;
+    margin-bottom: 10px;
+    @media screen and (max-width: 1094px) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+}
+
+.anchor-tag{
+    font-size: 16px;
+    font-weight: 500;
+    color: #707070;
+    text-decoration: none;
+    @media screen and (max-width: 1094px) {
+        font-size: 13px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    }
+}
+
+.owl-carousel {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: hidden;
+}
+
+.owl-carousel .owl-item {
+    flex: 0 0 auto; 
+}

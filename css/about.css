@@ -1,0 +1,83 @@
+.outer-div .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 135px;
+  border-bottom: 1px solid #dedede;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+@media screen and (max-width: 1300px) {
+  .outer-div .navbar {
+    padding: 10px 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .outer-div .navbar {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .outer-div .navbar .logo-Container {
+    width: 50%;
+  }
+}
+.outer-div .navbar .cross {
+  position: relative;
+  width: 35px;
+  height: 3px; /* Thickness of the lines */
+  background-color: #1B0D36;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 550px) {
+  .outer-div .navbar .cross {
+    width: 8%;
+  }
+}
+.outer-div .navbar .cross::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1B0D36;
+  transform: rotate(-90deg);
+  border-radius: 5px;
+}
+.outer-div .text {
+  font-size: 57px;
+  color: #EFEFEF;
+  text-align: center;
+  font-family: "Kanit", serif;
+  text-transform: uppercase;
+}
+.outer-div .text span {
+  font-weight: 700;
+}
+.outer-div .two-divider-outer {
+  width: 100%;
+  height: 100%;
+}
+.outer-div .two-divider-outer .first-divider {
+  width: 40%;
+  background-color: #FAFAFA;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer-div .two-divider-outer .first-divider .inner-banner {
+  width: 71%;
+  height: 57%;
+  background: linear-gradient(to right, #307ffc, #a1c6ff, #136dfb);
+  border: 4px solid rgba(255, 255, 255, 0.3019607843);
+  border-radius: 15px;
+}
+.outer-div .two-divider-outer .second-divider {
+  background-color: #FFFFFF;
+}/*# sourceMappingURL=about.css.map */
